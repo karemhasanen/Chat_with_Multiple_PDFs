@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with any PDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Chat with any PDF</h1>
+            <div class="social-links">
+                <a href="#" class="social-btn">Join Discord</a>
+                <a href="#" class="social-btn">Post to Twitter</a>
+                <a href="#" class="social-btn">Share on Facebook</a>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Initial Upload View -->
+            <div id="upload-view">
+                <div class="upload-box" id="drop-zone">
+                    <div class="upload-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                            <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+                        </svg>
+                    </div>
+                    <p>Drop PDF here</p>
+                    <input type="file" id="file-input" multiple accept=".pdf" hidden>
+                </div>
+                <div class="upload-links">
+                    <a href="#" id="browse-files">Browse my Computer</a>
+                    <span>
+                        <a href="#">From URL</a>
+                        <a href="#">Find a PDF</a>
+                    </span>
+                </div>
+
+                <!-- File Preview Section (Initially Hidden) -->
+                <div id="file-preview-section" class="hidden">
+                    <h3>Selected Files:</h3>
+                    <div id="file-list"></div>
+                    <button id="process-button">Process Documents</button>
+                    <div id="upload-status"></div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>For Students 🎓</h3>
+                        <p>Enhance your learning experience. Comprehend textbooks, handouts, and presentations effortlessly. Don't spend hours flipping through research papers and academic articles.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>For Work 💼</h3>
+                        <p>Efficiently analyze your documents. From financial and sales reports to project and business proposals, training manuals, and legal contracts, ChatPDF can quickly provide you with the information you need.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>For Curious Minds 🤔</h3>
+                        <p>Unlock a wealth of knowledge. Discover new insights and answers from historical documents, poetry, and literature, effortlessly. ChatPDF can understand any language.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat View (Initially Hidden) -->
+            <div id="chat-view" class="hidden">
+                <div id="chat-container">
+                    <!-- Chat messages will be appended here -->
+                </div>
+                <div class="input-container-placeholder"></div>
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Ask any question about your documents..." autocomplete="off">
+                    <button type="submit" id="send-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" fill="white"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <a href="#">My Account</a> -
+            <a href="#">Pricing</a> -
+            <a href="#">API</a> -
+            <a href="#">FAQ</a> -
+            <a href="#">Affiliate</a> -
+            <a href="#">Twitter</a> -
+            <a href="#">Contact</a> -
+            <a href="#">Policy</a> -
+            <a href="#">Terms</a> -
+            <a href="#">Imprint</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

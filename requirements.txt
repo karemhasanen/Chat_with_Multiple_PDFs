@@ -1,0 +1,22 @@
+# FastAPI server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Environment variables
+python-dotenv
+
+# PDF Processing
+pypdf2
+
+# LangChain and AI dependencies
+langchain
+langchain-core
+langchain-community
+langchain-google-genai
+langchain-huggingface  # <-- ADD THIS LINE
+google-generativeai
+sentence-transformers
+faiss-cpu
+
+
